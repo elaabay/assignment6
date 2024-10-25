@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        pre {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List in JSON</h1>
+    <pre id="json-output"></pre>
+
+    <script>
+        // Global variable (contains the products in JSON format)
+        const products = [
+            {
+                "name": "Vintage T-shirt",
+                "description": "Tie-dye Grateful Dead T-shirt",
+                "price": "$35",
+                "categories": ["clothing", "vintage"]
+            },
+            {
+                "name": "Bluetooth Speaker",
+                "description": "Portable wireless speaker with deep bass",
+                "price": "$50",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Leather Wallet",
+                "description": "Classic leather wallet with card slots",
+                "price": "$20",
+                "categories": ["accessories", "vintage"]
+            },
+            {
+                "name": "Smart Watch",
+                "description": "Fitness tracker with heart rate monitor",
+                "price": "$150",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Coffee Mug",
+                "description": "Ceramic mug with motivational quote",
+                "price": "$10",
+                "categories": ["home goods"]
+            },
+            {
+                "name": "Noise-cancelling Headphones",
+                "description": "Over-ear headphones with active noise cancellation",
+                "price": "$200",
+                "categories": ["electronics"]
+            },
+            {
+                "name": "Scented Candle",
+                "description": "Lavender-scented candle for relaxation",
+                "price": "$15",
+                "categories": ["home goods", "accessories"]
+            },
+            {
+                "name": "Graphic Hoodie",
+                "description": "Cotton hoodie with cool graphic print",
+                "price": "$45",
+                "categories": ["clothing"]
+            }
+        ];
+
+        // Converts the JSON object to a string
+        const jsonString = JSON.stringify(products, null, 2);
+        //display string
+        document.getElementById('json-output').textContent = jsonString;
+    </script>
+</body>
+</html>
